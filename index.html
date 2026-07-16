@@ -119,6 +119,12 @@ footer{padding:20px 32px 40px;color:var(--muted);font-size:11.5px;border-top:1px
  .rep-abc th:nth-child(3),.rep-abc td:nth-child(3){width:16%;}
  .rep-abc th:nth-child(4),.rep-abc td:nth-child(4){width:14%;}
  .rep-abc th:nth-child(5),.rep-abc td:nth-child(5){width:16%;}
+
+ .rep-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;}
+ .rep-head-l{flex:1;min-width:0;}
+ .rep-head-r{text-align:center;flex:0 0 auto;}
+ .rep-qr{width:96px;height:96px;display:block;}
+ .rep-qr-cap{font-size:8.5px;color:#555;line-height:1.2;display:block;margin-top:2px;}
 }
 
 </style>
@@ -249,9 +255,17 @@ footer{padding:20px 32px 40px;color:var(--muted);font-size:11.5px;border-top:1px
 </div>
 <div id="reportView">
   <div class="rep-sec">
-    <h1 class="rep-title">Relatório Técnico de Medições — Equipe Preventiva</h1>
-    <p id="repPeriodo" class="rep-meta"></p>
-    <p id="repGerado" class="rep-meta2"></p>
+    <div class="rep-head">
+      <div class="rep-head-l">
+        <h1 class="rep-title">Relatório Técnico de Medições — Equipe Preventiva</h1>
+        <p id="repPeriodo" class="rep-meta"></p>
+        <p id="repGerado" class="rep-meta2"></p>
+      </div>
+      <div class="rep-head-r">
+        <img class="rep-qr" src="data:image/png;base64,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" alt="QR Code do dashboard">
+        <span class="rep-qr-cap">Versão interativa online<br>escaneie para abrir no celular</span>
+      </div>
+    </div>
     <div id="repKpis" class="repkpi-row"></div>
     <div id="repGargalo" class="rep-gargalo"></div>
     <div class="rep-charts">
@@ -22557,68 +22571,11 @@ function downloadHTML(html, filename){
   setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(url);},1500);
 }
 function downloadShareCopy(){ downloadHTML(ORIGINAL_HTML,'Dashboard_Medicoes_Equipe_Preventiva.html'); }
-async function shareDashboard(){
-  const fname='Dashboard_Medicoes_Equipe_Preventiva.html';
-  try{
-    const file=new File([ORIGINAL_HTML],fname,{type:'text/html'});
-    if(navigator.canShare && navigator.canShare({files:[file]})){
-      await navigator.share({files:[file],title:'Dashboard de Medições — Equipe Preventiva',text:'Dashboard de Medições (Contrato 131/2024). Abra este arquivo no navegador do celular.'});
-      return;
-    }
-  }catch(e){ if(e && e.name==='AbortError') return; }
-  // fallback (desktop sem compartilhamento nativo): baixa o arquivo e instrui
-  downloadHTML(ORIGINAL_HTML,fname);
-  alert('Baixamos o arquivo "'+fname+'".\n\nPara enviar por WhatsApp:\n1) Abra o WhatsApp (Web ou celular);\n2) Na conversa, anexe este arquivo (clipe > Documento);\n3) Quem receber toca no arquivo e ele abre no navegador do próprio celular — funciona offline, sem precisar da pasta OneDrive.\n\nObs.: para um LINK clicável (em vez de anexo), o arquivo precisa ser hospedado online. Posso te ajudar a colocar no Google Drive/Netlify e gerar esse link.');
-}
-
-/* pdf.js sob demanda (CDN) */
-let _pdfjsReady=null;
-function loadPdfJs(){
-  if(_pdfjsReady) return _pdfjsReady;
-  _pdfjsReady=new Promise((res,rej)=>{
-    if(window.pdfjsLib){ try{pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';}catch(e){} return res(window.pdfjsLib); }
-    const s=document.createElement('script');
-    s.src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
-    s.onload=()=>{ try{pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';}catch(e){} res(window.pdfjsLib); };
-    s.onerror=()=>rej(new Error('Falha ao carregar o leitor de PDF (precisa de internet na 1ª vez).'));
-    document.head.appendChild(s);
-  });
-  return _pdfjsReady;
-}
-
-async function handleUpload(fileList){
-  const status=document.getElementById('uploadStatus');
-  const files=[...fileList].filter(f=>/\.pdf$/i.test(f.name));
-  if(!files.length) return;
-  status.textContent='Carregando leitor de PDF…'; status.className='up-info';
-  try{ await loadPdfJs(); }catch(e){ status.textContent=e.message; status.className='up-err'; return; }
-  const novos=[]; const problemas=[];
-  for(const f of files){
-    status.textContent='Lendo '+f.name+'…';
-    try{
-      const buf=new Uint8Array(await f.arrayBuffer());
-      const r=await parsePdf(buf);
-      if(r.meta.medicao==null||!r.rows.length){ problemas.push(f.name+': não reconhecido como boletim'); continue; }
-      novos.push({meta:r.meta,rows:r.rows,file:f.name});
-    }catch(e){ problemas.push(f.name+': '+e.message); }
-  }
-  if(!novos.length){ status.textContent='Nenhuma medição válida. '+problemas.join('; '); status.className='up-err'; return; }
-  // merge: substituir medições de mesmo número, ordenar
-  const byNum=new Map(PARSED.map(m=>[m.meta.medicao,m]));
-  const substituidas=[];
-  for(const n of novos){ if(byNum.has(n.meta.medicao)) substituidas.push(n.meta.medicao); byNum.set(n.meta.medicao,n); }
-  const merged=[...byNum.values()].sort((a,b)=>a.meta.medicao-b.meta.medicao);
-  const resumo=novos.map(n=>'nº'+n.meta.medicao+' ('+n.rows.length+' itens)').join(', ');
-  let msg='Medições processadas: '+resumo+'.';
-  if(substituidas.length) msg+=' Substituídas: '+substituidas.join(', ')+'.';
-  if(problemas.length) msg+=' Ignoradas: '+problemas.join('; ')+'.';
-  msg+='\n\nO dashboard será atualizado e uma cópia atualizada será baixada. Continuar?';
-  if(!confirm(msg)){ status.textContent='Cancelado.'; status.className=''; return; }
-  const html=regenerateHTML(merged); if(!html) return;
-  downloadHTML(html,'index.html');
-  status.textContent='Atualizado! Recarregando…'; status.className='up-ok';
-  const blob=new Blob([html],{type:'text/html;charset=utf-8'});
-  setTimeout(()=>{ window.location.href=URL.createObjectURL(blob); }, 600);
+const SHARE_URL='https://allison-souto.github.io/Equipe-Preventiva-Aparecida-do-Taboado/';
+function shareDashboard(){
+  const msg='Dashboard de Medições — Equipe Preventiva (Contrato 131/2024, Aparecida do Taboado/MS). Abra pelo link (funciona em qualquer celular): '+SHARE_URL;
+  try{ if(navigator.clipboard) navigator.clipboard.writeText(SHARE_URL); }catch(e){}
+  window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank');
 }
 
 /* ===== Relatório técnico (impressão) ===== */
