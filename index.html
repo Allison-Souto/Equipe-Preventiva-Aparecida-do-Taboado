@@ -113,7 +113,7 @@ footer{padding:20px 32px 40px;color:var(--muted);font-size:11.5px;border-top:1px
  .rep-chartbox.doughnut{flex:0 0 35%;}
  .rep-charts canvas{width:100%!important;height:auto!important;}
  .rep-abc{table-layout:fixed;}
- .rep-abc td,.rep-abc th{overflow-wrap:break-word;word-break:break-word;}
+ .rep-abc td,.rep-abc th{overflow-wrap:anywhere;word-break:break-word;white-space:normal;}
  .rep-abc th:nth-child(1),.rep-abc td:nth-child(1){width:5%;}
  .rep-abc th:nth-child(2),.rep-abc td:nth-child(2){width:49%;}
  .rep-abc th:nth-child(3),.rep-abc td:nth-child(3){width:16%;}
@@ -136,6 +136,7 @@ footer{padding:20px 32px 40px;color:var(--muted);font-size:11.5px;border-top:1px
   <button class="btn" onclick="document.getElementById('pdfInput').click()">Adicionar Medição (PDF)</button>
   <input type="file" id="pdfInput" accept="application/pdf" multiple style="display:none">
   <button class="btn btn-ghost" onclick="shareDashboard()">Enviar por WhatsApp</button>
+  <button class="btn btn-ghost" onclick="configurarPublicacao()" title="Configurar publicação automática no GitHub (uso da secretaria)">Publicação automática</button>
   <span id="uploadStatus"></span>
 </div>
 
@@ -22557,7 +22558,7 @@ async function parsePdf(buf){
 }
 
 /* ---- funcionalidades: relatório, upload, cópia ---- */
-/* ===== Aplicações adicionais: relatório, upload de PDF, cópia portátil ===== */
+/* ===== Aplicações: relatório, upload de PDF, publicação automática, compartilhamento ===== */
 const PARSED_MARK_A='/*__PARSED'+'_START__*/', PARSED_MARK_B='/*__PARSED'+'_END__*/';
 function regenerateHTML(newParsed){
   const a=ORIGINAL_HTML.indexOf(PARSED_MARK_A), b=ORIGINAL_HTML.indexOf(PARSED_MARK_B);
@@ -22570,12 +22571,109 @@ function downloadHTML(html, filename){
   a.href=url; a.download=filename; document.body.appendChild(a); a.click();
   setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(url);},1500);
 }
-function downloadShareCopy(){ downloadHTML(ORIGINAL_HTML,'Dashboard_Medicoes_Equipe_Preventiva.html'); }
+
+/* ---------- Publicação automática no GitHub ---------- */
+const GH_OWNER='Allison-Souto', GH_REPO='Equipe-Preventiva-Aparecida-do-Taboado';
 const SHARE_URL='https://allison-souto.github.io/Equipe-Preventiva-Aparecida-do-Taboado/';
+function ghToken(){ try{ return localStorage.getItem('gh_token')||''; }catch(e){ return ''; } }
+function configurarPublicacao(){
+  const cur=ghToken();
+  const t=prompt('Cole seu token do GitHub (fine-grained, com permissão "Contents: Read and write" neste repositório).\n\nEle fica salvo SÓ neste navegador e nunca vai para o arquivo publicado nem para terceiros. Deixe em branco e OK para remover.', cur);
+  if(t===null) return;
+  try{ localStorage.setItem('gh_token', t.trim()); }catch(e){}
+  const st=document.getElementById('uploadStatus');
+  if(st){ st.textContent = t.trim() ? 'Publicação automática ativada neste navegador.' : 'Token removido — voltará a baixar o arquivo.'; st.className = t.trim()?'up-ok':''; }
+}
+async function ghApi(path, method, body){
+  const r=await fetch('https://api.github.com'+path, {
+    method: method||'GET',
+    headers:{ 'Authorization':'Bearer '+ghToken(), 'Accept':'application/vnd.github+json', 'X-GitHub-Api-Version':'2022-11-28', 'Content-Type':'application/json' },
+    body: body? JSON.stringify(body): undefined
+  });
+  if(!r.ok){ const txt=await r.text(); throw new Error('GitHub '+r.status+': '+txt.slice(0,160)); }
+  return r.json();
+}
+function utf8ToB64(str){ return btoa(unescape(encodeURIComponent(str))); }
+async function publishToGitHub(html){
+  const o=GH_OWNER, rp=GH_REPO;
+  const ref=await ghApi(`/repos/${o}/${rp}/git/ref/heads/main`);
+  const latest=ref.object.sha;
+  const commit=await ghApi(`/repos/${o}/${rp}/git/commits/${latest}`);
+  const blob=await ghApi(`/repos/${o}/${rp}/git/blobs`,'POST',{content:utf8ToB64(html),encoding:'base64'});
+  const tree=await ghApi(`/repos/${o}/${rp}/git/trees`,'POST',{base_tree:commit.tree.sha,tree:[{path:'index.html',mode:'100644',type:'blob',sha:blob.sha}]});
+  const nc=await ghApi(`/repos/${o}/${rp}/git/commits`,'POST',{message:'Atualiza dashboard (nova medição)',tree:tree.sha,parents:[latest]});
+  await ghApi(`/repos/${o}/${rp}/git/refs/heads/main`,'PATCH',{sha:nc.sha});
+}
+
+/* ---------- Compartilhar (WhatsApp com o link) ---------- */
+function downloadShareCopy(){ downloadHTML(ORIGINAL_HTML,'Dashboard_Medicoes_Equipe_Preventiva.html'); }
 function shareDashboard(){
   const msg='Dashboard de Medições — Equipe Preventiva (Contrato 131/2024, Aparecida do Taboado/MS). Abra pelo link (funciona em qualquer celular): '+SHARE_URL;
   try{ if(navigator.clipboard) navigator.clipboard.writeText(SHARE_URL); }catch(e){}
   window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank');
+}
+
+/* ---------- pdf.js sob demanda ---------- */
+let _pdfjsReady=null;
+function loadPdfJs(){
+  if(_pdfjsReady) return _pdfjsReady;
+  _pdfjsReady=new Promise((res,rej)=>{
+    if(window.pdfjsLib){ try{pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';}catch(e){} return res(window.pdfjsLib); }
+    const s=document.createElement('script');
+    s.src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+    s.onload=()=>{ try{pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';}catch(e){} res(window.pdfjsLib); };
+    s.onerror=()=>rej(new Error('Falha ao carregar o leitor de PDF (precisa de internet na 1ª vez).'));
+    document.head.appendChild(s);
+  });
+  return _pdfjsReady;
+}
+
+/* ---------- Adicionar medição ---------- */
+async function handleUpload(fileList){
+  const status=document.getElementById('uploadStatus');
+  const files=[...fileList].filter(f=>/\.pdf$/i.test(f.name));
+  if(!files.length) return;
+  status.textContent='Carregando leitor de PDF…'; status.className='up-info';
+  try{ await loadPdfJs(); }catch(e){ status.textContent=e.message; status.className='up-err'; return; }
+  const novos=[]; const problemas=[];
+  for(const f of files){
+    status.textContent='Lendo '+f.name+'…';
+    try{
+      const buf=new Uint8Array(await f.arrayBuffer());
+      const r=await parsePdf(buf);
+      if(r.meta.medicao==null||!r.rows.length){ problemas.push(f.name+': não reconhecido como boletim'); continue; }
+      novos.push({meta:r.meta,rows:r.rows,file:f.name});
+    }catch(e){ problemas.push(f.name+': '+e.message); }
+  }
+  if(!novos.length){ status.textContent='Nenhuma medição válida. '+problemas.join('; '); status.className='up-err'; return; }
+  const byNum=new Map(PARSED.map(m=>[m.meta.medicao,m]));
+  const substituidas=[];
+  for(const n of novos){ if(byNum.has(n.meta.medicao)) substituidas.push(n.meta.medicao); byNum.set(n.meta.medicao,n); }
+  const merged=[...byNum.values()].sort((a,b)=>a.meta.medicao-b.meta.medicao);
+  const resumo=novos.map(n=>'nº'+n.meta.medicao+' ('+n.rows.length+' itens)').join(', ');
+  const temToken=!!ghToken();
+  let msg='Medições processadas: '+resumo+'.';
+  if(substituidas.length) msg+=' Substituídas: '+substituidas.join(', ')+'.';
+  if(problemas.length) msg+=' Ignoradas: '+problemas.join('; ')+'.';
+  msg+= temToken ? '\n\nO dashboard será atualizado e PUBLICADO automaticamente no link do prefeito. Continuar?'
+                 : '\n\nO dashboard será atualizado e uma cópia (index.html) será baixada. Continuar?';
+  if(!confirm(msg)){ status.textContent='Cancelado.'; status.className=''; return; }
+  const html=regenerateHTML(merged); if(!html) return;
+  if(temToken){
+    status.textContent='Publicando no GitHub…'; status.className='up-info';
+    try{
+      await publishToGitHub(html);
+      status.textContent='Publicado! O link do prefeito será atualizado em ~1 min. Recarregando com os novos dados…'; status.className='up-ok';
+    }catch(e){
+      status.textContent='Não consegui publicar ('+e.message+'). Baixei o index.html para você subir manualmente.'; status.className='up-err';
+      downloadHTML(html,'index.html');
+    }
+  } else {
+    downloadHTML(html,'index.html');
+    status.textContent='index.html baixado. (Dica: clique em “Publicação automática” e configure o token para não precisar subir manualmente.)'; status.className='up-ok';
+  }
+  const blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  setTimeout(()=>{ window.location.href=URL.createObjectURL(blob); }, 1500);
 }
 
 /* ===== Relatório técnico (impressão) ===== */
