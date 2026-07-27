@@ -1,0 +1,33 @@
+<div id="reportView">
+  <div class="rep-sec">
+    <div class="rep-head">
+      <div class="rep-head-l">
+        <h1 class="rep-title">Relatório Técnico de Medições — Equipe Preventiva</h1>
+        <p id="repPeriodo" class="rep-meta"></p>
+        <p id="repGerado" class="rep-meta2"></p>
+      </div>
+      <div class="rep-head-r">
+        <img class="rep-qr" src="data:image/png;base64,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" alt="QR Code do dashboard">
+        <span class="rep-qr-cap">Versão interativa online<br>escaneie para abrir no celular</span>
+      </div>
+    </div>
+    <div id="repKpis" class="repkpi-row"></div>
+    <div id="repGargalo" class="rep-gargalo"></div>
+    <div class="rep-charts">
+      <div class="rep-chartbox doughnut"><canvas id="repCatChart" width="360" height="300"></canvas></div>
+      <div class="rep-chartbox"><canvas id="repTrendChart" width="680" height="300"></canvas></div>
+    </div>
+    <h2 class="rep-h">Custo por medição e categoria</h2>
+    <table id="repTotaisTable" class="rep-table"></table>
+  </div>
+  <div class="rep-sec rep-break">
+    <h2 class="rep-h">Curva ABC – Concentração de Gastos</h2>
+    <p class="rep-note">Itens ordenados por dispêndio acumulado no contrato. % do total = participação do item na categoria; % acumulado = soma progressiva.</p>
+    <h3 class="rep-sub">1 · Mão de obra</h3>
+    <table id="repAbcMO" class="rep-table rep-abc"></table>
+    <h3 class="rep-sub">2 · Materiais e insumos</h3>
+    <table id="repAbcMat" class="rep-table rep-abc"></table>
+    <h3 class="rep-sub">3 · Custo operacional</h3>
+    <table id="repAbcCO" class="rep-table rep-abc"></table>
+  </div>
+</div>

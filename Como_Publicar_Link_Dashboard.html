@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como publicar o Dashboard e gerar o link</title>
+<style>
+  body{font-family:Arial,Helvetica,sans-serif;max-width:760px;margin:24px auto;padding:0 18px;color:#1a2230;line-height:1.5;}
+  h1{font-size:22px;color:#12203a;margin-bottom:4px;}
+  h2{font-size:16px;color:#12203a;border-bottom:2px solid #12203a;padding-bottom:3px;margin-top:26px;}
+  .lead{color:#555;font-size:14px;}
+  ol{padding-left:20px;} li{margin:7px 0;}
+  code,.url{background:#eef2fb;border:1px solid #d5deee;border-radius:5px;padding:1px 6px;font-family:Consolas,monospace;font-size:13px;}
+  .card{border:1px solid #d5deee;border-left:4px solid #4f8dfd;border-radius:8px;padding:12px 16px;margin:14px 0;background:#fafbff;}
+  .rec{border-left-color:#33c17a;}
+  .tag{display:inline-block;background:#33c17a;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;vertical-align:middle;}
+  .tag.alt{background:#888;}
+  .note{font-size:13px;color:#555;background:#fff8e8;border-left:4px solid #f0b93b;padding:10px 14px;border-radius:6px;}
+  b{color:#12203a;}
+</style>
+</head>
+<body>
+  <h1>Transformar o Dashboard em um link (abre em qualquer celular)</h1>
+  <p class="lead">Objetivo: publicar o arquivo <code>Dashboard_Medicoes_Equipe_Preventiva.html</code> na internet e obter um endereço <span class="url">https://…</span> que, ao ser tocado no WhatsApp, abre direto no navegador do celular (iPhone ou Android), com todos os gráficos — sem baixar nada e sem depender do OneDrive.</p>
+
+  <div class="card rec">
+    <span class="tag">RECOMENDADO</span> &nbsp;<b>Netlify Drop</b> — grátis, link permanente, renderiza os gráficos.
+    <ol>
+      <li>No computador, acesse <span class="url">https://app.netlify.com/drop</span></li>
+      <li><b>Arraste</b> o arquivo <code>Dashboard_Medicoes_Equipe_Preventiva.html</code> (da pasta <i>Equipe Preventiva</i>) para dentro da área indicada na página.</li>
+      <li>Aguarde alguns segundos. O Netlify mostra um endereço como <span class="url">https://algum-nome-aleatorio.netlify.app</span> — <b>esse é o seu link</b>.</li>
+      <li>Para o link ficar permanente, crie uma conta grátis quando ele pedir (login com Google/e-mail leva 1 minuto). Sem conta, o link funciona mas pode expirar.</li>
+      <li>Copie o endereço e mande no WhatsApp. Quem receber toca no link e abre direto no navegador — iPhone e Android.</li>
+    </ol>
+    <p style="margin:6px 0 0"><b>Dica:</b> renomeie o site em <i>Site settings → Change site name</i> para algo como <span class="url">equipe-preventiva-131.netlify.app</span>, mais profissional.</p>
+  </div>
+
+  <div class="card">
+    <span class="tag alt">MAIS RÁPIDO, SEM CONTA</span> &nbsp;<b>tiiny.host</b>
+    <ol>
+      <li>Acesse <span class="url">https://tiiny.host</span></li>
+      <li>Clique em <b>Upload</b> e selecione o arquivo <code>Dashboard_Medicoes_Equipe_Preventiva.html</code>.</li>
+      <li>Ele gera um link na hora. No plano grátis o link pode expirar após alguns dias — bom para um envio pontual; para uso permanente use o Netlify acima.</li>
+    </ol>
+  </div>
+
+  <h2>Depois que você tiver o link</h2>
+  <p>Me mande o endereço <span class="url">https://…</span> aqui no chat que eu faço duas coisas:</p>
+  <ol>
+    <li>Configuro o botão <b>“Enviar por WhatsApp”</b> do dashboard para mandar <b>esse link</b> (em vez do arquivo) — aí no iPhone abre liso, no clique.</li>
+    <li>Gero um <b>QR Code</b> do link para incluir no relatório técnico — o prefeito escaneia com a câmera e abre no próprio celular.</li>
+  </ol>
+
+  <div class="note"><b>Por que precisa hospedar?</b> Um arquivo <code>.html</code> enviado como anexo no WhatsApp abre bem no Android, mas no iPhone (iOS) o visualizador interno costuma não renderizar os gráficos. Um link hospedado abre no Safari/Chrome como uma página normal e funciona igual nos dois sistemas.</div>
+
+  <p style="margin-top:20px;font-size:13px;color:#666">Atualize o site (novo link não é necessário) sempre que gerar uma versão nova do dashboard: no Netlify, arraste o arquivo novo por cima do mesmo site em <i>Deploys → arraste aqui</i>, que o mesmo endereço passa a mostrar a versão atualizada.</p>
+</body>
+</html>

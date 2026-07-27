@@ -1,0 +1,9 @@
+<div id="toolbar">
+  <strong style="color:#cdd8f0;font-size:13px;margin-right:4px">Equipe Preventiva</strong>
+  <button class="btn" onclick="window.print()">Imprimir Relatório Técnico</button>
+  <button class="btn" onclick="document.getElementById('pdfInput').click()">Adicionar Medição (PDF)</button>
+  <input type="file" id="pdfInput" accept="application/pdf" multiple style="display:none">
+  <button class="btn btn-ghost" onclick="shareDashboard()">Enviar por WhatsApp</button>
+  <button class="btn btn-ghost" onclick="configurarPublicacao()" title="Configurar publicação automática no GitHub (uso da secretaria)">Publicação automática</button>
+  <span id="uploadStatus"></span>
+</div>
