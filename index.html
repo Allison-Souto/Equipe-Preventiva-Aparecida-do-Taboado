@@ -22628,6 +22628,28 @@ function loadPdfJs(){
   return _pdfjsReady;
 }
 
+/* ---------- Conferência automática: soma das linhas x subtotal impresso no PDF ---------- */
+const TOLERANCIA_SECAO_R$=0.05; // por seção — arredondamento de centavos do próprio boletim é normal
+const TOLERANCIA_TOTAL_R$=0.15; // total geral (soma de 3 seções arredondadas) tolera um pouco mais
+function validarTotais(r){
+  const alertas=[];
+  const somas={};
+  for(const row of r.rows){ somas[row.section]=(somas[row.section]||0)+(row.valor_periodo||0); }
+  for(const sec of ['MAO_DE_OBRA','MATERIAIS','CUSTO_OPERACIONAL']){
+    const soma=somas[sec]||0;
+    const subtotal=r.meta[sec+'_subtotal_periodo'];
+    if(subtotal==null){ alertas.push(sec+': subtotal não encontrado no PDF'); continue; }
+    const diff=Math.abs(soma-subtotal);
+    if(diff>TOLERANCIA_SECAO_R$) alertas.push(sec+': soma das linhas R$'+soma.toFixed(2)+' ≠ subtotal do boletim R$'+subtotal.toFixed(2)+' (dif. R$'+diff.toFixed(2)+')');
+  }
+  const somaGeral=(somas.MAO_DE_OBRA||0)+(somas.MATERIAIS||0)+(somas.CUSTO_OPERACIONAL||0);
+  if(r.meta.custo_direto_obra_periodo!=null){
+    const diff=Math.abs(somaGeral-r.meta.custo_direto_obra_periodo);
+    if(diff>TOLERANCIA_TOTAL_R$) alertas.push('CUSTO DIRETO DA OBRA: soma geral R$'+somaGeral.toFixed(2)+' ≠ total do boletim R$'+r.meta.custo_direto_obra_periodo.toFixed(2)+' (dif. R$'+diff.toFixed(2)+')');
+  }
+  return alertas;
+}
+
 /* ---------- Adicionar medição ---------- */
 async function handleUpload(fileList){
   const status=document.getElementById('uploadStatus');
@@ -22635,13 +22657,15 @@ async function handleUpload(fileList){
   if(!files.length) return;
   status.textContent='Carregando leitor de PDF…'; status.className='up-info';
   try{ await loadPdfJs(); }catch(e){ status.textContent=e.message; status.className='up-err'; return; }
-  const novos=[]; const problemas=[];
+  const novos=[]; const problemas=[]; const avisos=[];
   for(const f of files){
     status.textContent='Lendo '+f.name+'…';
     try{
       const buf=new Uint8Array(await f.arrayBuffer());
       const r=await parsePdf(buf);
       if(r.meta.medicao==null||!r.rows.length){ problemas.push(f.name+': não reconhecido como boletim'); continue; }
+      const alertas=validarTotais(r);
+      if(alertas.length) avisos.push(f.name+' (medição nº'+r.meta.medicao+'):\n  - '+alertas.join('\n  - '));
       novos.push({meta:r.meta,rows:r.rows,file:f.name});
     }catch(e){ problemas.push(f.name+': '+e.message); }
   }
@@ -22655,6 +22679,11 @@ async function handleUpload(fileList){
   let msg='Medições processadas: '+resumo+'.';
   if(substituidas.length) msg+=' Substituídas: '+substituidas.join(', ')+'.';
   if(problemas.length) msg+=' Ignoradas: '+problemas.join('; ')+'.';
+  if(avisos.length){
+    msg='⚠️ ATENÇÃO — possível erro de leitura detectado:\n\n'+avisos.join('\n\n')+
+        '\n\nOs valores extraídos NÃO batem com os subtotais impressos no boletim. Publicar mesmo assim pode colocar custos errados no dashboard.'+
+        '\n\nRecomendo cancelar e revisar o PDF antes de continuar.\n\n'+msg;
+  }
   msg+= temToken ? '\n\nO dashboard será atualizado e PUBLICADO automaticamente no link do prefeito. Continuar?'
                  : '\n\nO dashboard será atualizado e uma cópia (index.html) será baixada. Continuar?';
   if(!confirm(msg)){ status.textContent='Cancelado.'; status.className=''; return; }
