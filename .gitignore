@@ -1,1 +1,6 @@
 PREFEITURA/
+
+# Segredos / configuração local — nunca versionar
+.env
+.env.local
+.env.*.local
