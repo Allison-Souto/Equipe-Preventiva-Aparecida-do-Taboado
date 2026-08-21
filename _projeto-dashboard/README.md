@@ -22,6 +22,30 @@ Esta pasta guarda todo o "motor" por trás do dashboard e da planilha entregues 
 
 Coloque o novo PDF na pasta principal "Equipe Preventiva" (mesmo padrão de nome: "14º Medição.pdf") e peça para o Claude atualizar o dashboard e a planilha — ele vai reexecutar `extract.py` → `build_dataset.py` → `build_xlsx.py` e regenerar o HTML a partir do `template.html`.
 
+## Formatos aceitos pelo botão "Adicionar Medição"
+
+A partir da 14ª medição (maio/26) a Prefeitura passou a emitir, em vez do **BOLETIM DE MEDIÇÃO**, um **ORÇAMENTO SINTÉTICO COM FÓRMULAS** — outro documento, com outro cabeçalho e outras colunas. O leitor do dashboard reconhece os dois, em PDF ou em Excel:
+
+| Documento | PDF | Excel (.xlsx) |
+|---|---|---|
+| **Boletim de medição** (1ª a 13ª) — "MEDIÇÃO Nº n", colunas Contrato/Período/Saldo | sim | sim (aba com ITEM / SERVIÇO / UNID.) |
+| **Orçamento sintético** (14ª em diante) — colunas Item / Código / Banco / Descrição / Und / Quant. / Valor Unit / Total / Peso (%) | sim | sim |
+
+Como funciona a leitura:
+
+- **Boletim**: identificado pelo texto "MEDIÇÃO Nº n" na 1ª página. Traz o nº da medição, a data, o período e a contratada dentro do próprio documento.
+- **Orçamento sintético**: identificado pelo cabeçalho da tabela (Item / Descrição / Quant. / Total). As seções `1` (técnico-profissionais), `2` (insumos) e `3` (custo operacional) viram, respectivamente, mão de obra, materiais e custo operacional; o valor de cada linha é a coluna **Total** e o preço unitário é a coluna de valor unitário que reproduz `Total = Quant. × unitário`.
+  - O orçamento **não traz o número da medição**: ele é lido do nome do arquivo (`14º Medição.pdf`, `Medição 14.xlsx`, …). Se não der para deduzir, o dashboard pergunta.
+  - O **mês de competência** vem do nome da obra ("MANUTENÇÃO PREVENTIVA - MAIO") combinado com o ano da referência de banco (SINAPI - 04/2026). Se não der para deduzir, o dashboard pergunta.
+  - **Contratada e nº do contrato** são herdados da última medição já carregada (o orçamento não os traz).
+- Antes de publicar, o dashboard mostra nº da medição, mês e total de cada arquivo lido, e confere a soma das linhas contra os subtotais impressos no documento — se divergir, avisa antes de deixar publicar.
+
+O leitor de `.xlsx` é próprio (ZIP + XML via `DecompressionStream`), sem biblioteca externa: o HTML continua autossuficiente. Ele procura a aba certa sozinho, e localiza as colunas pelos nomes do cabeçalho — então mudanças de posição de coluna na planilha não quebram a leitura.
+
+Validação feita ao implementar: a 14ª e a 15ª medições lidas do PDF e do Excel dão resultados idênticos (154 e 106 itens, R$ 184.457,74 e R$ 187.012,00, batendo com o "Total Geral" impresso); e a 13ª medição lida do Excel reproduz item por item o que o `extract.py` tirou do PDF.
+
+> Atenção ao comparar meses: a partir de maio/26 a composição do **custo operacional** mudou no documento de origem (saíram "vale transporte", "combustíveis" e os veículos medidos por unidade; entraram "veículo leve" por hora e "transporte - mensalista"). O dashboard mostra isso como supressão de umas linhas e início de outras, que é o que de fato aconteceu — não é erro de leitura.
+
 ## Dashboard autoatualizável (nova versão do HTML)
 
 O `Dashboard_Medicoes_Equipe_Preventiva.html` agora é autossuficiente e autoatualizável — não depende do OneDrive nem de internet para ser visualizado, e traz três recursos na barra superior:
