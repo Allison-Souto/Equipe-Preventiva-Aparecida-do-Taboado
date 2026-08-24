@@ -1,6 +1,6 @@
 # Projeto — Dashboard de Medições (Contrato 131/2024)
 
-Esta pasta guarda todo o "motor" por trás do dashboard e da planilha entregues (`Dashboard_Medicoes_Equipe_Preventiva.html` e `Medicoes_Equipe_Preventiva.xlsx`, na pasta principal). Como ela está dentro do OneDrive, sincroniza automaticamente para qualquer computador logado na mesma conta — é isso que permite continuar o trabalho de outra máquina.
+Esta pasta guarda todo o "motor" por trás do dashboard entregue (`index.html`, na pasta principal, publicado em https://allison-souto.github.io/Equipe-Preventiva-Aparecida-do-Taboado/). Como ela está dentro do OneDrive, sincroniza automaticamente para qualquer computador logado na mesma conta — é isso que permite continuar o trabalho de outra máquina.
 
 ## O que tem aqui
 
@@ -48,11 +48,11 @@ Validação feita ao implementar: a 14ª e a 15ª medições lidas do PDF e do E
 
 ## Dashboard autoatualizável (nova versão do HTML)
 
-O `Dashboard_Medicoes_Equipe_Preventiva.html` agora é autossuficiente e autoatualizável — não depende do OneDrive nem de internet para ser visualizado, e traz três recursos na barra superior:
+O `index.html` é autossuficiente e autoatualizável — não depende do OneDrive nem de internet para ser visualizado, e traz três recursos na barra superior:
 
 1. **Imprimir Relatório Técnico** — gera uma versão resumida (KPIs, gráficos e tabelas por categoria, top-10 insumos da curva ABC, funções de mão de obra) pronta para imprimir/salvar em PDF e encaminhar. Use o diálogo de impressão do navegador → "Salvar como PDF".
-2. **Baixar cópia para compartilhar** — salva uma cópia idêntica do HTML; qualquer pessoa abre no navegador dela, sem precisar da pasta OneDrive.
-3. **Adicionar Medição (PDF)** — o próprio HTML lê o novo boletim em PDF (via pdf.js, só precisa de internet nessa 1ª leitura), recalcula tudo no navegador e baixa o HTML já atualizado. Substitui automaticamente medições de mesmo número.
+2. **Baixar cópia para compartilhar** — gera na hora uma cópia idêntica do HTML (com o nome `Dashboard_Medicoes_Equipe_Preventiva.html`); qualquer pessoa abre no navegador dela, sem precisar da pasta OneDrive. A cópia é sempre gerada sob demanda, com os dados do momento — por isso não existe mais um arquivo fixo desse nome versionado na pasta: ele só ficava desatualizado.
+3. **Adicionar Medição (PDF ou Excel)** — o próprio HTML lê o novo documento (boletim de medição ou orçamento sintético; PDF via pdf.js, que só precisa de internet nessa 1ª leitura), recalcula tudo no navegador e publica/baixa o HTML já atualizado. Substitui automaticamente medições de mesmo número.
 
 O "motor" desse HTML autossuficiente está em `scripts/self_update/`:
 - `browser_agg.js` — porta de `build_dataset.py` para JavaScript (agregação: pivots, curva ABC, deltas). Validado contra a saída do Python (totais, valores e deltas idênticos).
