@@ -48,11 +48,14 @@ Validação feita ao implementar: a 14ª e a 15ª medições lidas do PDF e do E
 
 ## Dashboard autoatualizável (nova versão do HTML)
 
-O `index.html` é autossuficiente e autoatualizável — não depende do OneDrive nem de internet para ser visualizado, e traz três recursos na barra superior:
+O `index.html` é autossuficiente e autoatualizável — não depende do OneDrive nem de internet para ser visualizado, e traz quatro recursos na barra superior:
 
 1. **Imprimir Relatório Técnico** — gera uma versão resumida (KPIs, gráficos e tabelas por categoria, top-10 insumos da curva ABC, funções de mão de obra) pronta para imprimir/salvar em PDF e encaminhar. Use o diálogo de impressão do navegador → "Salvar como PDF".
 2. **Baixar cópia para compartilhar** — gera na hora uma cópia idêntica do HTML (com o nome `Dashboard_Medicoes_Equipe_Preventiva.html`); qualquer pessoa abre no navegador dela, sem precisar da pasta OneDrive. A cópia é sempre gerada sob demanda, com os dados do momento — por isso não existe mais um arquivo fixo desse nome versionado na pasta: ele só ficava desatualizado.
 3. **Adicionar Medição (PDF ou Excel)** — o próprio HTML lê o novo documento (boletim de medição ou orçamento sintético; PDF via pdf.js, que só precisa de internet nessa 1ª leitura), recalcula tudo no navegador e publica/baixa o HTML já atualizado. Substitui automaticamente medições de mesmo número.
+4. **Gerenciar medições** — lista o que está carregado (número, mês, quantidade de itens, total e arquivo de origem) e permite **excluir** uma ou mais medições. Serve para tirar do dashboard algo que não deveria estar lá; para apenas *corrigir* uma medição importada errada não é preciso excluir — reimportar o arquivo certo já substitui a de mesmo número. A exclusão só mexe nos dados embutidos no HTML: os PDFs e planilhas de origem continuam intactos e podem ser importados de novo a qualquer momento. Exige que sobre pelo menos uma medição.
+
+Importar e excluir terminam no mesmo caminho (`aplicarMedicoes()` no `index.html`): confirmação com o resumo do que vai mudar, regeração do HTML a partir do bloco de dados embutido, publicação no GitHub (se houver token configurado) ou download do `index.html`, e recarga da página já com os dados novos.
 
 O "motor" desse HTML autossuficiente está em `scripts/self_update/`:
 - `browser_agg.js` — porta de `build_dataset.py` para JavaScript (agregação: pivots, curva ABC, deltas). Validado contra a saída do Python (totais, valores e deltas idênticos).

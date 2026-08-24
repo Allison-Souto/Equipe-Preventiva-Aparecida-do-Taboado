@@ -77,11 +77,26 @@ footer{padding:20px 32px 40px;color:var(--muted);font-size:11.5px;border-top:1px
 .btn-ghost{background:#1b2740;color:#cdd8f0;border:1px solid #2a3a5c;}
 #uploadStatus{font-size:12px;color:#9aa6c2;white-space:pre-line;}
 .up-ok{color:#33c17a!important;}.up-err{color:#f0556b!important;}.up-info{color:#4f8dfd!important;}
+#gerenciador{display:none;position:fixed;inset:0;z-index:100;background:rgba(8,12,20,.72);align-items:center;justify-content:center;padding:20px;}
+.gm-box{background:var(--panel);border:1px solid var(--border);border-radius:12px;max-width:780px;width:100%;max-height:82vh;display:flex;flex-direction:column;box-shadow:0 18px 50px rgba(0,0,0,.5);}
+.gm-head{padding:14px 18px;border-bottom:1px solid var(--border);font-weight:700;font-size:14px;color:var(--text);}
+.gm-head span{font-weight:400;color:var(--muted);font-size:12px;}
+.gm-body{overflow:auto;padding:4px 18px;}
+.gm-tab{width:100%;border-collapse:collapse;font-size:12.5px;color:var(--text);}
+.gm-tab td{padding:7px 8px;border-bottom:1px solid var(--border);white-space:nowrap;}
+.gm-tab td.num{text-align:right;color:var(--muted);}
+.gm-tab td.orig{color:var(--muted);font-size:11.5px;white-space:normal;word-break:break-word;}
+.gm-tab tr:hover td{background:var(--panel2);}
+.gm-tab label{cursor:pointer;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
+.gm-dica{margin:0;padding:10px 18px;font-size:11.5px;color:var(--muted);border-top:1px solid var(--border);line-height:1.5;}
+.gm-pe{display:flex;gap:10px;align-items:center;justify-content:flex-end;padding:12px 18px;border-top:1px solid var(--border);}
+#gmStatus{margin-right:auto;font-size:12px;color:var(--muted);}
+.gm-del{background:var(--red);}
 #reportView{display:none;}
 @media print{
  @page{margin:14mm 12mm;}
  body{background:#fff!important;color:#111!important;}
- #toolbar,header,.wrap,footer{display:none!important;}
+ #toolbar,header,.wrap,footer,#gerenciador{display:none!important;}
  #reportView{display:block!important;color:#12203a;font-family:Arial,Helvetica,sans-serif;}
  .rep-break{page-break-before:always;}
  .rep-title{font-size:19px;margin:0 0 4px;color:#12203a;}
@@ -135,6 +150,7 @@ footer{padding:20px 32px 40px;color:var(--muted);font-size:11.5px;border-top:1px
   <button class="btn" onclick="window.print()">Imprimir Relatório Técnico</button>
   <button class="btn" onclick="document.getElementById('pdfInput').click()">Adicionar Medição (PDF ou Excel)</button>
   <input type="file" id="pdfInput" accept=".pdf,.xlsx,.xlsm,application/pdf" multiple style="display:none">
+  <button class="btn btn-ghost" onclick="abrirGerenciador()">Gerenciar medições</button>
   <button class="btn btn-ghost" onclick="shareDashboard()">Enviar por WhatsApp</button>
   <button class="btn btn-ghost" onclick="configurarPublicacao()" title="Configurar publicação automática no GitHub (uso da secretaria)">Publicação automática</button>
   <span id="uploadStatus"></span>
@@ -1529,10 +1545,18 @@ async function handleUpload(fileList){
         '\n\nOs valores extraídos NÃO batem com os subtotais impressos no boletim. Publicar mesmo assim pode colocar custos errados no dashboard.'+
         '\n\nRecomendo cancelar e revisar o PDF antes de continuar.\n\n'+msg;
   }
+  await aplicarMedicoes(merged,msg);
+}
+
+/* ---------- Aplica um novo conjunto de medições: confirma, publica (ou baixa) e recarrega ----------
+   Usado tanto por quem importa (handleUpload) quanto por quem exclui (excluirSelecionadas). */
+async function aplicarMedicoes(merged, msg){
+  const status=document.getElementById('uploadStatus');
+  const temToken=!!ghToken();
   msg+= temToken ? '\n\nO dashboard será atualizado e PUBLICADO automaticamente no link do prefeito. Continuar?'
                  : '\n\nO dashboard será atualizado e uma cópia (index.html) será baixada. Continuar?';
-  if(!confirm(msg)){ status.textContent='Cancelado.'; status.className=''; return; }
-  const html=regenerateHTML(merged); if(!html) return;
+  if(!confirm(msg)){ status.textContent='Cancelado.'; status.className=''; return false; }
+  const html=regenerateHTML(merged); if(!html) return false;
   if(temToken){
     status.textContent='Publicando no GitHub…'; status.className='up-info';
     try{
@@ -1548,6 +1572,51 @@ async function handleUpload(fileList){
   }
   const blob=new Blob([html],{type:'text/html;charset=utf-8'});
   setTimeout(()=>{ window.location.href=URL.createObjectURL(blob); }, 1500);
+  return true;
+}
+
+/* ---------- Gerenciar medições: conferir o que está carregado e excluir ---------- */
+function abrirGerenciador(){
+  let mod=document.getElementById('gerenciador');
+  if(!mod){
+    mod=document.createElement('div');
+    mod.id='gerenciador';
+    mod.innerHTML='<div class="gm-box">'+
+      '<div class="gm-head">Gerenciar medições <span id="gmContagem"></span></div>'+
+      '<div class="gm-body"><table class="gm-tab"><tbody id="gmLista"></tbody></table></div>'+
+      '<p class="gm-dica">Para <b>corrigir</b> uma medição importada errada você não precisa excluir: basta importar o arquivo certo de novo em “Adicionar Medição” — a medição de mesmo número é substituída. Excluir serve para tirar do dashboard uma medição que não deveria estar lá.</p>'+
+      '<div class="gm-pe"><span id="gmStatus"></span>'+
+      '<button class="btn btn-ghost" onclick="fecharGerenciador()">Fechar</button>'+
+      '<button class="btn gm-del" onclick="excluirSelecionadas()">Excluir selecionadas</button></div>'+
+      '</div>';
+    document.body.appendChild(mod);
+    mod.addEventListener('click',e=>{ if(e.target===mod) fecharGerenciador(); });
+  }
+  document.getElementById('gmContagem').textContent='— '+PARSED.length+' carregadas';
+  document.getElementById('gmLista').innerHTML=[...PARSED].sort((a,b)=>b.meta.medicao-a.meta.medicao).map(m=>
+    '<tr><td><label><input type="checkbox" value="'+m.meta.medicao+'">nº'+m.meta.medicao+'</label></td>'+
+    '<td>'+(month_label(m.meta.periodo)||'mês?')+'</td>'+
+    '<td class="num">'+m.rows.length+' itens</td>'+
+    '<td class="num">'+fmtBRC(m.meta.custo_direto_obra_periodo)+'</td>'+
+    '<td class="orig">'+(m.file||'—')+'</td></tr>').join('');
+  const st=document.getElementById('gmStatus'); st.textContent=''; st.className='';
+  mod.style.display='flex';
+}
+function fecharGerenciador(){ const m=document.getElementById('gerenciador'); if(m) m.style.display='none'; }
+
+async function excluirSelecionadas(){
+  const st=document.getElementById('gmStatus');
+  const marcados=[...document.querySelectorAll('#gmLista input[type=checkbox]:checked')].map(c=>parseInt(c.value,10));
+  if(!marcados.length){ st.textContent='Marque pelo menos uma medição.'; st.className='up-err'; return; }
+  if(marcados.length>=PARSED.length){ st.textContent='Precisa sobrar pelo menos uma medição no dashboard.'; st.className='up-err'; return; }
+  const fora=PARSED.filter(m=>marcados.includes(m.meta.medicao));
+  const merged=PARSED.filter(m=>!marcados.includes(m.meta.medicao)).sort((a,b)=>a.meta.medicao-b.meta.medicao);
+  const lista=fora.map(m=>'nº'+m.meta.medicao+' — '+(month_label(m.meta.periodo)||'mês?')+' ('+m.rows.length+' itens, '+fmtBRC(m.meta.custo_direto_obra_periodo)+')').join('\n  • ');
+  const msg='Excluir do dashboard '+(fora.length===1?'esta medição':'estas '+fora.length+' medições')+':\n\n  • '+lista+
+            '\n\nFicam '+merged.length+' medições. Os arquivos originais não são apagados — dá para importar de novo quando quiser.';
+  fecharGerenciador();
+  const ok=await aplicarMedicoes(merged,msg);
+  if(!ok) abrirGerenciador();
 }
 
 /* ===== Relatório técnico (impressão) ===== */
