@@ -21768,15 +21768,15 @@
    "periodo": "01/05/2026 A 31/05/2026",
    "contratada": "SOLO CONTRUÇÕES E INCORPORAÇÕES",
    "contrato_no": "06/2026",
-   "MAO_DE_OBRA_subtotal_periodo": 98504.38000000002,
-   "MAO_DE_OBRA_subtotal_contrato": 98504.38000000002,
-   "MATERIAIS_subtotal_periodo": 68395.87999999999,
-   "MATERIAIS_subtotal_contrato": 68395.87999999999,
-   "CUSTO_OPERACIONAL_subtotal_periodo": 17557.48,
-   "CUSTO_OPERACIONAL_subtotal_contrato": 17557.48,
-   "custo_direto_obra_periodo": 184457.74,
-   "custo_direto_obra_contrato": 184457.74,
-   "esta_medicao": 184457.74
+   "MAO_DE_OBRA_subtotal_periodo": 98624.76000000001,
+   "MAO_DE_OBRA_subtotal_contrato": 98624.76000000001,
+   "MATERIAIS_subtotal_periodo": 68549.98999999999,
+   "MATERIAIS_subtotal_contrato": 68549.98999999999,
+   "CUSTO_OPERACIONAL_subtotal_periodo": 17578.78,
+   "CUSTO_OPERACIONAL_subtotal_contrato": 17578.78,
+   "custo_direto_obra_periodo": 184753.53,
+   "custo_direto_obra_contrato": 184753.53,
+   "esta_medicao": 184753.53
   },
   "rows": [
    {
@@ -21793,9 +21793,9 @@
     "qtd_contrato": 156,
     "qtd_periodo": 156,
     "qtd_saldo": 0,
-    "preco_unitario": 25.85,
-    "valor_contrato": 4032.6,
-    "valor_periodo": 4032.6,
+    "preco_unitario": 25.88,
+    "valor_contrato": 4037.28,
+    "valor_periodo": 4037.28,
     "valor_saldo": 0
    },
    {
@@ -21812,9 +21812,9 @@
     "qtd_contrato": 208,
     "qtd_periodo": 208,
     "qtd_saldo": 0,
-    "preco_unitario": 29.35,
-    "valor_contrato": 6104.8,
-    "valor_periodo": 6104.8,
+    "preco_unitario": 29.38,
+    "valor_contrato": 6111.04,
+    "valor_periodo": 6111.04,
     "valor_saldo": 0
    },
    {
@@ -21831,9 +21831,9 @@
     "qtd_contrato": 156,
     "qtd_periodo": 156,
     "qtd_saldo": 0,
-    "preco_unitario": 25.42,
-    "valor_contrato": 3965.52,
-    "valor_periodo": 3965.52,
+    "preco_unitario": 25.45,
+    "valor_contrato": 3970.2,
+    "valor_periodo": 3970.2,
     "valor_saldo": 0
    },
    {
@@ -21850,9 +21850,9 @@
     "qtd_contrato": 156,
     "qtd_periodo": 156,
     "qtd_saldo": 0,
-    "preco_unitario": 25.22,
-    "valor_contrato": 3934.32,
-    "valor_periodo": 3934.32,
+    "preco_unitario": 25.25,
+    "valor_contrato": 3939,
+    "valor_periodo": 3939,
     "valor_saldo": 0
    },
    {
@@ -21869,9 +21869,9 @@
     "qtd_contrato": 208,
     "qtd_periodo": 208,
     "qtd_saldo": 0,
-    "preco_unitario": 29.91,
-    "valor_contrato": 6221.28,
-    "valor_periodo": 6221.28,
+    "preco_unitario": 29.94,
+    "valor_contrato": 6227.52,
+    "valor_periodo": 6227.52,
     "valor_saldo": 0
    },
    {
@@ -21888,9 +21888,9 @@
     "qtd_contrato": 156,
     "qtd_periodo": 156,
     "qtd_saldo": 0,
-    "preco_unitario": 23.57,
-    "valor_contrato": 3676.92,
-    "valor_periodo": 3676.92,
+    "preco_unitario": 23.6,
+    "valor_contrato": 3681.6,
+    "valor_periodo": 3681.6,
     "valor_saldo": 0
    },
    {
@@ -21907,9 +21907,9 @@
     "qtd_contrato": 208,
     "qtd_periodo": 208,
     "qtd_saldo": 0,
-    "preco_unitario": 30.66,
-    "valor_contrato": 6377.28,
-    "valor_periodo": 6377.28,
+    "preco_unitario": 30.69,
+    "valor_contrato": 6383.52,
+    "valor_periodo": 6383.52,
     "valor_saldo": 0
    },
    {
@@ -21926,9 +21926,9 @@
     "qtd_contrato": 208,
     "qtd_periodo": 208,
     "qtd_saldo": 0,
-    "preco_unitario": 22.72,
-    "valor_contrato": 4725.76,
-    "valor_periodo": 4725.76,
+    "preco_unitario": 22.75,
+    "valor_contrato": 4732,
+    "valor_periodo": 4732,
     "valor_saldo": 0
    },
    {
@@ -21945,9 +21945,9 @@
     "qtd_contrato": 208,
     "qtd_periodo": 208,
     "qtd_saldo": 0,
-    "preco_unitario": 27.42,
-    "valor_contrato": 5703.36,
-    "valor_periodo": 5703.36,
+    "preco_unitario": 27.45,
+    "valor_contrato": 5709.6,
+    "valor_periodo": 5709.6,
     "valor_saldo": 0
    },
    {
@@ -21964,9 +21964,9 @@
     "qtd_contrato": 208,
     "qtd_periodo": 208,
     "qtd_saldo": 0,
-    "preco_unitario": 43.3,
-    "valor_contrato": 9006.4,
-    "valor_periodo": 9006.4,
+    "preco_unitario": 43.36,
+    "valor_contrato": 9018.88,
+    "valor_periodo": 9018.88,
     "valor_saldo": 0
    },
    {
@@ -21983,9 +21983,9 @@
     "qtd_contrato": 208,
     "qtd_periodo": 208,
     "qtd_saldo": 0,
-    "preco_unitario": 28.09,
-    "valor_contrato": 5842.72,
-    "valor_periodo": 5842.72,
+    "preco_unitario": 28.13,
+    "valor_contrato": 5851.04,
+    "valor_periodo": 5851.04,
     "valor_saldo": 0
    },
    {
@@ -22002,9 +22002,9 @@
     "qtd_contrato": 208,
     "qtd_periodo": 208,
     "qtd_saldo": 0,
-    "preco_unitario": 32.61,
-    "valor_contrato": 6782.88,
-    "valor_periodo": 6782.88,
+    "preco_unitario": 32.65,
+    "valor_contrato": 6791.2,
+    "valor_periodo": 6791.2,
     "valor_saldo": 0
    },
    {
@@ -22021,9 +22021,9 @@
     "qtd_contrato": 832,
     "qtd_periodo": 832,
     "qtd_saldo": 0,
-    "preco_unitario": 22.53,
-    "valor_contrato": 18744.96,
-    "valor_periodo": 18744.96,
+    "preco_unitario": 22.56,
+    "valor_contrato": 18769.92,
+    "valor_periodo": 18769.92,
     "valor_saldo": 0
    },
    {
@@ -22040,9 +22040,9 @@
     "qtd_contrato": 78,
     "qtd_periodo": 78,
     "qtd_saldo": 0,
-    "preco_unitario": 171.61,
-    "valor_contrato": 13385.58,
-    "valor_periodo": 13385.58,
+    "preco_unitario": 171.82,
+    "valor_contrato": 13401.96,
+    "valor_periodo": 13401.96,
     "valor_saldo": 0
    },
    {
@@ -22059,9 +22059,9 @@
     "qtd_contrato": 750,
     "qtd_periodo": 750,
     "qtd_saldo": 0,
-    "preco_unitario": 0.93,
-    "valor_contrato": 697.5,
-    "valor_periodo": 697.5,
+    "preco_unitario": 0.94,
+    "valor_contrato": 705,
+    "valor_periodo": 705,
     "valor_saldo": 0
    },
    {
@@ -22097,9 +22097,9 @@
     "qtd_contrato": 25,
     "qtd_periodo": 25,
     "qtd_saldo": 0,
-    "preco_unitario": 9.51,
-    "valor_contrato": 237.75,
-    "valor_periodo": 237.75,
+    "preco_unitario": 9.52,
+    "valor_contrato": 238,
+    "valor_periodo": 238,
     "valor_saldo": 0
    },
    {
@@ -22154,9 +22154,9 @@
     "qtd_contrato": 4,
     "qtd_periodo": 4,
     "qtd_saldo": 0,
-    "preco_unitario": 150.26,
-    "valor_contrato": 601.04,
-    "valor_periodo": 601.04,
+    "preco_unitario": 150.44,
+    "valor_contrato": 601.76,
+    "valor_periodo": 601.76,
     "valor_saldo": 0
    },
    {
@@ -22173,9 +22173,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 188.25,
-    "valor_contrato": 188.25,
-    "valor_periodo": 188.25,
+    "preco_unitario": 188.48,
+    "valor_contrato": 188.48,
+    "valor_periodo": 188.48,
     "valor_saldo": 0
    },
    {
@@ -22192,9 +22192,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 613.35,
-    "valor_contrato": 613.35,
-    "valor_periodo": 613.35,
+    "preco_unitario": 614.09,
+    "valor_contrato": 614.09,
+    "valor_periodo": 614.09,
     "valor_saldo": 0
    },
    {
@@ -22211,9 +22211,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 59.41,
-    "valor_contrato": 59.41,
-    "valor_periodo": 59.41,
+    "preco_unitario": 59.48,
+    "valor_contrato": 59.48,
+    "valor_periodo": 59.48,
     "valor_saldo": 0
    },
    {
@@ -22230,9 +22230,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 93.86,
-    "valor_contrato": 93.86,
-    "valor_periodo": 93.86,
+    "preco_unitario": 93.97,
+    "valor_contrato": 93.97,
+    "valor_periodo": 93.97,
     "valor_saldo": 0
    },
    {
@@ -22249,9 +22249,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 92.23,
-    "valor_contrato": 92.23,
-    "valor_periodo": 92.23,
+    "preco_unitario": 92.34,
+    "valor_contrato": 92.34,
+    "valor_periodo": 92.34,
     "valor_saldo": 0
    },
    {
@@ -22268,9 +22268,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 88.36,
-    "valor_contrato": 88.36,
-    "valor_periodo": 88.36,
+    "preco_unitario": 88.47,
+    "valor_contrato": 88.47,
+    "valor_periodo": 88.47,
     "valor_saldo": 0
    },
    {
@@ -22287,9 +22287,9 @@
     "qtd_contrato": 22,
     "qtd_periodo": 22,
     "qtd_saldo": 0,
-    "preco_unitario": 203.94,
-    "valor_contrato": 4486.68,
-    "valor_periodo": 4486.68,
+    "preco_unitario": 204.19,
+    "valor_contrato": 4492.18,
+    "valor_periodo": 4492.18,
     "valor_saldo": 0
    },
    {
@@ -22306,9 +22306,9 @@
     "qtd_contrato": 28,
     "qtd_periodo": 28,
     "qtd_saldo": 0,
-    "preco_unitario": 203.94,
-    "valor_contrato": 5710.32,
-    "valor_periodo": 5710.32,
+    "preco_unitario": 204.19,
+    "valor_contrato": 5717.32,
+    "valor_periodo": 5717.32,
     "valor_saldo": 0
    },
    {
@@ -22325,9 +22325,9 @@
     "qtd_contrato": 3,
     "qtd_periodo": 3,
     "qtd_saldo": 0,
-    "preco_unitario": 1245.23,
-    "valor_contrato": 3735.69,
-    "valor_periodo": 3735.69,
+    "preco_unitario": 1246.74,
+    "valor_contrato": 3740.22,
+    "valor_periodo": 3740.22,
     "valor_saldo": 0
    },
    {
@@ -22344,9 +22344,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 491.57,
-    "valor_contrato": 491.57,
-    "valor_periodo": 491.57,
+    "preco_unitario": 492.17,
+    "valor_contrato": 492.17,
+    "valor_periodo": 492.17,
     "valor_saldo": 0
    },
    {
@@ -22363,9 +22363,9 @@
     "qtd_contrato": 3,
     "qtd_periodo": 3,
     "qtd_saldo": 0,
-    "preco_unitario": 46.78,
-    "valor_contrato": 140.34,
-    "valor_periodo": 140.34,
+    "preco_unitario": 46.84,
+    "valor_contrato": 140.52,
+    "valor_periodo": 140.52,
     "valor_saldo": 0
    },
    {
@@ -22382,9 +22382,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 70.24,
-    "valor_contrato": 140.48,
-    "valor_periodo": 140.48,
+    "preco_unitario": 70.33,
+    "valor_contrato": 140.66,
+    "valor_periodo": 140.66,
     "valor_saldo": 0
    },
    {
@@ -22401,9 +22401,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 10.43,
-    "valor_contrato": 20.86,
-    "valor_periodo": 20.86,
+    "preco_unitario": 10.44,
+    "valor_contrato": 20.88,
+    "valor_periodo": 20.88,
     "valor_saldo": 0
    },
    {
@@ -22420,9 +22420,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 33.18,
-    "valor_contrato": 33.18,
-    "valor_periodo": 33.18,
+    "preco_unitario": 33.22,
+    "valor_contrato": 33.22,
+    "valor_periodo": 33.22,
     "valor_saldo": 0
    },
    {
@@ -22439,9 +22439,9 @@
     "qtd_contrato": 18,
     "qtd_periodo": 18,
     "qtd_saldo": 0,
-    "preco_unitario": 22.77,
-    "valor_contrato": 409.86,
-    "valor_periodo": 409.86,
+    "preco_unitario": 22.8,
+    "valor_contrato": 410.4,
+    "valor_periodo": 410.4,
     "valor_saldo": 0
    },
    {
@@ -22458,9 +22458,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 10.14,
-    "valor_contrato": 10.14,
-    "valor_periodo": 10.14,
+    "preco_unitario": 10.15,
+    "valor_contrato": 10.15,
+    "valor_periodo": 10.15,
     "valor_saldo": 0
    },
    {
@@ -22477,9 +22477,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 24.01,
-    "valor_contrato": 24.01,
-    "valor_periodo": 24.01,
+    "preco_unitario": 24.04,
+    "valor_contrato": 24.04,
+    "valor_periodo": 24.04,
     "valor_saldo": 0
    },
    {
@@ -22496,9 +22496,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 262.35,
-    "valor_contrato": 262.35,
-    "valor_periodo": 262.35,
+    "preco_unitario": 262.67,
+    "valor_contrato": 262.67,
+    "valor_periodo": 262.67,
     "valor_saldo": 0
    },
    {
@@ -22534,9 +22534,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 163.77,
-    "valor_contrato": 163.77,
-    "valor_periodo": 163.77,
+    "preco_unitario": 163.96,
+    "valor_contrato": 163.96,
+    "valor_periodo": 163.96,
     "valor_saldo": 0
    },
    {
@@ -22572,9 +22572,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 30.75,
-    "valor_contrato": 30.75,
-    "valor_periodo": 30.75,
+    "preco_unitario": 30.79,
+    "valor_contrato": 30.79,
+    "valor_periodo": 30.79,
     "valor_saldo": 0
    },
    {
@@ -22591,9 +22591,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 96.57,
-    "valor_contrato": 96.57,
-    "valor_periodo": 96.57,
+    "preco_unitario": 96.69,
+    "valor_contrato": 96.69,
+    "valor_periodo": 96.69,
     "valor_saldo": 0
    },
    {
@@ -22610,9 +22610,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 10.45,
-    "valor_contrato": 10.45,
-    "valor_periodo": 10.45,
+    "preco_unitario": 10.46,
+    "valor_contrato": 10.46,
+    "valor_periodo": 10.46,
     "valor_saldo": 0
    },
    {
@@ -22629,9 +22629,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 39.42,
-    "valor_contrato": 39.42,
-    "valor_periodo": 39.42,
+    "preco_unitario": 39.47,
+    "valor_contrato": 39.47,
+    "valor_periodo": 39.47,
     "valor_saldo": 0
    },
    {
@@ -22648,9 +22648,9 @@
     "qtd_contrato": 3,
     "qtd_periodo": 3,
     "qtd_saldo": 0,
-    "preco_unitario": 18.33,
-    "valor_contrato": 54.99,
-    "valor_periodo": 54.99,
+    "preco_unitario": 18.35,
+    "valor_contrato": 55.05,
+    "valor_periodo": 55.05,
     "valor_saldo": 0
    },
    {
@@ -22667,9 +22667,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 24.01,
-    "valor_contrato": 24.01,
-    "valor_periodo": 24.01,
+    "preco_unitario": 24.04,
+    "valor_contrato": 24.04,
+    "valor_periodo": 24.04,
     "valor_saldo": 0
    },
    {
@@ -22686,9 +22686,9 @@
     "qtd_contrato": 4,
     "qtd_periodo": 4,
     "qtd_saldo": 0,
-    "preco_unitario": 13.34,
-    "valor_contrato": 53.36,
-    "valor_periodo": 53.36,
+    "preco_unitario": 13.35,
+    "valor_contrato": 53.4,
+    "valor_periodo": 53.4,
     "valor_saldo": 0
    },
    {
@@ -22705,9 +22705,9 @@
     "qtd_contrato": 6,
     "qtd_periodo": 6,
     "qtd_saldo": 0,
-    "preco_unitario": 27.98,
-    "valor_contrato": 167.88,
-    "valor_periodo": 167.88,
+    "preco_unitario": 28.01,
+    "valor_contrato": 168.06,
+    "valor_periodo": 168.06,
     "valor_saldo": 0
    },
    {
@@ -22724,9 +22724,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 763.57,
-    "valor_contrato": 763.57,
-    "valor_periodo": 763.57,
+    "preco_unitario": 764.5,
+    "valor_contrato": 764.5,
+    "valor_periodo": 764.5,
     "valor_saldo": 0
    },
    {
@@ -22743,9 +22743,9 @@
     "qtd_contrato": 6,
     "qtd_periodo": 6,
     "qtd_saldo": 0,
-    "preco_unitario": 24.43,
-    "valor_contrato": 146.58,
-    "valor_periodo": 146.58,
+    "preco_unitario": 24.46,
+    "valor_contrato": 146.76,
+    "valor_periodo": 146.76,
     "valor_saldo": 0
    },
    {
@@ -22762,9 +22762,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 34.77,
-    "valor_contrato": 34.77,
-    "valor_periodo": 34.77,
+    "preco_unitario": 34.81,
+    "valor_contrato": 34.81,
+    "valor_periodo": 34.81,
     "valor_saldo": 0
    },
    {
@@ -22781,9 +22781,9 @@
     "qtd_contrato": 1.6,
     "qtd_periodo": 1.6,
     "qtd_saldo": 0,
-    "preco_unitario": 96.36,
-    "valor_contrato": 154.17,
-    "valor_periodo": 154.17,
+    "preco_unitario": 96.48,
+    "valor_contrato": 154.36,
+    "valor_periodo": 154.36,
     "valor_saldo": 0
    },
    {
@@ -22800,9 +22800,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 61.65,
-    "valor_contrato": 61.65,
-    "valor_periodo": 61.65,
+    "preco_unitario": 61.73,
+    "valor_contrato": 61.73,
+    "valor_periodo": 61.73,
     "valor_saldo": 0
    },
    {
@@ -22819,9 +22819,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 28.22,
-    "valor_contrato": 28.22,
-    "valor_periodo": 28.22,
+    "preco_unitario": 28.25,
+    "valor_contrato": 28.25,
+    "valor_periodo": 28.25,
     "valor_saldo": 0
    },
    {
@@ -22838,9 +22838,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 16.01,
-    "valor_contrato": 32.02,
-    "valor_periodo": 32.02,
+    "preco_unitario": 16.02,
+    "valor_contrato": 32.04,
+    "valor_periodo": 32.04,
     "valor_saldo": 0
    },
    {
@@ -22857,9 +22857,9 @@
     "qtd_contrato": 4,
     "qtd_periodo": 4,
     "qtd_saldo": 0,
-    "preco_unitario": 6.16,
-    "valor_contrato": 24.64,
-    "valor_periodo": 24.64,
+    "preco_unitario": 6.17,
+    "valor_contrato": 24.68,
+    "valor_periodo": 24.68,
     "valor_saldo": 0
    },
    {
@@ -22876,9 +22876,9 @@
     "qtd_contrato": 3,
     "qtd_periodo": 3,
     "qtd_saldo": 0,
-    "preco_unitario": 46.49,
-    "valor_contrato": 139.47,
-    "valor_periodo": 139.47,
+    "preco_unitario": 46.54,
+    "valor_contrato": 139.62,
+    "valor_periodo": 139.62,
     "valor_saldo": 0
    },
    {
@@ -22895,9 +22895,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 339.94,
-    "valor_contrato": 339.94,
-    "valor_periodo": 339.94,
+    "preco_unitario": 340.36,
+    "valor_contrato": 340.36,
+    "valor_periodo": 340.36,
     "valor_saldo": 0
    },
    {
@@ -22914,9 +22914,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 74.55,
-    "valor_contrato": 74.55,
-    "valor_periodo": 74.55,
+    "preco_unitario": 74.64,
+    "valor_contrato": 74.64,
+    "valor_periodo": 74.64,
     "valor_saldo": 0
    },
    {
@@ -22933,9 +22933,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 36.92,
-    "valor_contrato": 36.92,
-    "valor_periodo": 36.92,
+    "preco_unitario": 36.96,
+    "valor_contrato": 36.96,
+    "valor_periodo": 36.96,
     "valor_saldo": 0
    },
    {
@@ -22952,9 +22952,9 @@
     "qtd_contrato": 3,
     "qtd_periodo": 3,
     "qtd_saldo": 0,
-    "preco_unitario": 41.76,
-    "valor_contrato": 125.28,
-    "valor_periodo": 125.28,
+    "preco_unitario": 41.81,
+    "valor_contrato": 125.43,
+    "valor_periodo": 125.43,
     "valor_saldo": 0
    },
    {
@@ -22971,9 +22971,9 @@
     "qtd_contrato": 4,
     "qtd_periodo": 4,
     "qtd_saldo": 0,
-    "preco_unitario": 65.75,
-    "valor_contrato": 263,
-    "valor_periodo": 263,
+    "preco_unitario": 65.83,
+    "valor_contrato": 263.32,
+    "valor_periodo": 263.32,
     "valor_saldo": 0
    },
    {
@@ -23009,9 +23009,9 @@
     "qtd_contrato": 5,
     "qtd_periodo": 5,
     "qtd_saldo": 0,
-    "preco_unitario": 23.09,
-    "valor_contrato": 115.45,
-    "valor_periodo": 115.45,
+    "preco_unitario": 23.12,
+    "valor_contrato": 115.6,
+    "valor_periodo": 115.6,
     "valor_saldo": 0
    },
    {
@@ -23028,9 +23028,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 202.16,
-    "valor_contrato": 202.16,
-    "valor_periodo": 202.16,
+    "preco_unitario": 202.4,
+    "valor_contrato": 202.4,
+    "valor_periodo": 202.4,
     "valor_saldo": 0
    },
    {
@@ -23047,9 +23047,9 @@
     "qtd_contrato": 12,
     "qtd_periodo": 12,
     "qtd_saldo": 0,
-    "preco_unitario": 9.81,
-    "valor_contrato": 117.72,
-    "valor_periodo": 117.72,
+    "preco_unitario": 9.82,
+    "valor_contrato": 117.84,
+    "valor_periodo": 117.84,
     "valor_saldo": 0
    },
    {
@@ -23066,9 +23066,9 @@
     "qtd_contrato": 200,
     "qtd_periodo": 200,
     "qtd_saldo": 0,
-    "preco_unitario": 3.38,
-    "valor_contrato": 676,
-    "valor_periodo": 676,
+    "preco_unitario": 3.39,
+    "valor_contrato": 678,
+    "valor_periodo": 678,
     "valor_saldo": 0
    },
    {
@@ -23085,9 +23085,9 @@
     "qtd_contrato": 50,
     "qtd_periodo": 50,
     "qtd_saldo": 0,
-    "preco_unitario": 11.55,
-    "valor_contrato": 577.5,
-    "valor_periodo": 577.5,
+    "preco_unitario": 11.56,
+    "valor_contrato": 578,
+    "valor_periodo": 578,
     "valor_saldo": 0
    },
    {
@@ -23104,9 +23104,9 @@
     "qtd_contrato": 3,
     "qtd_periodo": 3,
     "qtd_saldo": 0,
-    "preco_unitario": 49.67,
-    "valor_contrato": 149.01,
-    "valor_periodo": 149.01,
+    "preco_unitario": 49.73,
+    "valor_contrato": 149.19,
+    "valor_periodo": 149.19,
     "valor_saldo": 0
    },
    {
@@ -23123,9 +23123,9 @@
     "qtd_contrato": 6,
     "qtd_periodo": 6,
     "qtd_saldo": 0,
-    "preco_unitario": 19.75,
-    "valor_contrato": 118.5,
-    "valor_periodo": 118.5,
+    "preco_unitario": 19.77,
+    "valor_contrato": 118.62,
+    "valor_periodo": 118.62,
     "valor_saldo": 0
    },
    {
@@ -23161,9 +23161,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 30.03,
-    "valor_contrato": 60.06,
-    "valor_periodo": 60.06,
+    "preco_unitario": 30.07,
+    "valor_contrato": 60.14,
+    "valor_periodo": 60.14,
     "valor_saldo": 0
    },
    {
@@ -23180,9 +23180,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 125.51,
-    "valor_contrato": 125.51,
-    "valor_periodo": 125.51,
+    "preco_unitario": 125.66,
+    "valor_contrato": 125.66,
+    "valor_periodo": 125.66,
     "valor_saldo": 0
    },
    {
@@ -23218,9 +23218,9 @@
     "qtd_contrato": 8,
     "qtd_periodo": 8,
     "qtd_saldo": 0,
-    "preco_unitario": 203.94,
-    "valor_contrato": 1631.52,
-    "valor_periodo": 1631.52,
+    "preco_unitario": 204.19,
+    "valor_contrato": 1633.52,
+    "valor_periodo": 1633.52,
     "valor_saldo": 0
    },
    {
@@ -23237,9 +23237,9 @@
     "qtd_contrato": 3250,
     "qtd_periodo": 3250,
     "qtd_saldo": 0,
-    "preco_unitario": 0.93,
-    "valor_contrato": 3022.5,
-    "valor_periodo": 3022.5,
+    "preco_unitario": 0.94,
+    "valor_contrato": 3055,
+    "valor_periodo": 3055,
     "valor_saldo": 0
    },
    {
@@ -23256,9 +23256,9 @@
     "qtd_contrato": 29.28,
     "qtd_periodo": 29.28,
     "qtd_saldo": 0,
-    "preco_unitario": 20,
-    "valor_contrato": 585.6,
-    "valor_periodo": 585.6,
+    "preco_unitario": 20.03,
+    "valor_contrato": 586.47,
+    "valor_periodo": 586.47,
     "valor_saldo": 0
    },
    {
@@ -23294,9 +23294,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 40.26,
-    "valor_contrato": 40.26,
-    "valor_periodo": 40.26,
+    "preco_unitario": 40.3,
+    "valor_contrato": 40.3,
+    "valor_periodo": 40.3,
     "valor_saldo": 0
    },
    {
@@ -23313,9 +23313,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 23.09,
-    "valor_contrato": 46.18,
-    "valor_periodo": 46.18,
+    "preco_unitario": 23.12,
+    "valor_contrato": 46.24,
+    "valor_periodo": 46.24,
     "valor_saldo": 0
    },
    {
@@ -23332,9 +23332,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 22.04,
-    "valor_contrato": 44.08,
-    "valor_periodo": 44.08,
+    "preco_unitario": 22.06,
+    "valor_contrato": 44.12,
+    "valor_periodo": 44.12,
     "valor_saldo": 0
    },
    {
@@ -23351,9 +23351,9 @@
     "qtd_contrato": 1.2,
     "qtd_periodo": 1.2,
     "qtd_saldo": 0,
-    "preco_unitario": 96.36,
-    "valor_contrato": 115.63,
-    "valor_periodo": 115.63,
+    "preco_unitario": 96.48,
+    "valor_contrato": 115.77,
+    "valor_periodo": 115.77,
     "valor_saldo": 0
    },
    {
@@ -23370,9 +23370,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 23.75,
-    "valor_contrato": 23.75,
-    "valor_periodo": 23.75,
+    "preco_unitario": 23.78,
+    "valor_contrato": 23.78,
+    "valor_periodo": 23.78,
     "valor_saldo": 0
    },
    {
@@ -23389,9 +23389,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 108.42,
-    "valor_contrato": 108.42,
-    "valor_periodo": 108.42,
+    "preco_unitario": 108.55,
+    "valor_contrato": 108.55,
+    "valor_periodo": 108.55,
     "valor_saldo": 0
    },
    {
@@ -23408,9 +23408,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 16.48,
-    "valor_contrato": 16.48,
-    "valor_periodo": 16.48,
+    "preco_unitario": 16.5,
+    "valor_contrato": 16.5,
+    "valor_periodo": 16.5,
     "valor_saldo": 0
    },
    {
@@ -23446,7 +23446,7 @@
     "qtd_contrato": 0.17,
     "qtd_periodo": 0.17,
     "qtd_saldo": 0,
-    "preco_unitario": 24.06,
+    "preco_unitario": 24.09,
     "valor_contrato": 4.09,
     "valor_periodo": 4.09,
     "valor_saldo": 0
@@ -23465,9 +23465,9 @@
     "qtd_contrato": 0.175,
     "qtd_periodo": 0.175,
     "qtd_saldo": 0,
-    "preco_unitario": 80.06,
-    "valor_contrato": 14.01,
-    "valor_periodo": 14.01,
+    "preco_unitario": 80.16,
+    "valor_contrato": 14.02,
+    "valor_periodo": 14.02,
     "valor_saldo": 0
    },
    {
@@ -23484,9 +23484,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 35.33,
-    "valor_contrato": 35.33,
-    "valor_periodo": 35.33,
+    "preco_unitario": 35.37,
+    "valor_contrato": 35.37,
+    "valor_periodo": 35.37,
     "valor_saldo": 0
    },
    {
@@ -23503,9 +23503,9 @@
     "qtd_contrato": 6,
     "qtd_periodo": 6,
     "qtd_saldo": 0,
-    "preco_unitario": 63.2,
-    "valor_contrato": 379.2,
-    "valor_periodo": 379.2,
+    "preco_unitario": 63.27,
+    "valor_contrato": 379.62,
+    "valor_periodo": 379.62,
     "valor_saldo": 0
    },
    {
@@ -23522,9 +23522,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 9.31,
-    "valor_contrato": 9.31,
-    "valor_periodo": 9.31,
+    "preco_unitario": 9.32,
+    "valor_contrato": 9.32,
+    "valor_periodo": 9.32,
     "valor_saldo": 0
    },
    {
@@ -23541,9 +23541,9 @@
     "qtd_contrato": 0.9,
     "qtd_periodo": 0.9,
     "qtd_saldo": 0,
-    "preco_unitario": 24.39,
-    "valor_contrato": 21.95,
-    "valor_periodo": 21.95,
+    "preco_unitario": 24.42,
+    "valor_contrato": 21.97,
+    "valor_periodo": 21.97,
     "valor_saldo": 0
    },
    {
@@ -23560,9 +23560,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 3.42,
-    "valor_contrato": 3.42,
-    "valor_periodo": 3.42,
+    "preco_unitario": 3.43,
+    "valor_contrato": 3.43,
+    "valor_periodo": 3.43,
     "valor_saldo": 0
    },
    {
@@ -23579,9 +23579,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 31.32,
-    "valor_contrato": 62.64,
-    "valor_periodo": 62.64,
+    "preco_unitario": 31.35,
+    "valor_contrato": 62.7,
+    "valor_periodo": 62.7,
     "valor_saldo": 0
    },
    {
@@ -23598,9 +23598,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 34.02,
-    "valor_contrato": 34.02,
-    "valor_periodo": 34.02,
+    "preco_unitario": 34.06,
+    "valor_contrato": 34.06,
+    "valor_periodo": 34.06,
     "valor_saldo": 0
    },
    {
@@ -23636,9 +23636,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 9.19,
-    "valor_contrato": 9.19,
-    "valor_periodo": 9.19,
+    "preco_unitario": 9.2,
+    "valor_contrato": 9.2,
+    "valor_periodo": 9.2,
     "valor_saldo": 0
    },
    {
@@ -23674,9 +23674,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 437.65,
-    "valor_contrato": 437.65,
-    "valor_periodo": 437.65,
+    "preco_unitario": 438.18,
+    "valor_contrato": 438.18,
+    "valor_periodo": 438.18,
     "valor_saldo": 0
    },
    {
@@ -23693,9 +23693,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 71,
-    "valor_contrato": 71,
-    "valor_periodo": 71,
+    "preco_unitario": 71.09,
+    "valor_contrato": 71.09,
+    "valor_periodo": 71.09,
     "valor_saldo": 0
    },
    {
@@ -23712,9 +23712,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 11.56,
-    "valor_contrato": 11.56,
-    "valor_periodo": 11.56,
+    "preco_unitario": 11.57,
+    "valor_contrato": 11.57,
+    "valor_periodo": 11.57,
     "valor_saldo": 0
    },
    {
@@ -23731,9 +23731,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 10.12,
-    "valor_contrato": 10.12,
-    "valor_periodo": 10.12,
+    "preco_unitario": 10.13,
+    "valor_contrato": 10.13,
+    "valor_periodo": 10.13,
     "valor_saldo": 0
    },
    {
@@ -23750,9 +23750,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 85.87,
-    "valor_contrato": 85.87,
-    "valor_periodo": 85.87,
+    "preco_unitario": 85.98,
+    "valor_contrato": 85.98,
+    "valor_periodo": 85.98,
     "valor_saldo": 0
    },
    {
@@ -23788,9 +23788,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 2136.44,
-    "valor_contrato": 4272.88,
-    "valor_periodo": 4272.88,
+    "preco_unitario": 2139.03,
+    "valor_contrato": 4278.06,
+    "valor_periodo": 4278.06,
     "valor_saldo": 0
    },
    {
@@ -23807,9 +23807,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 11.77,
-    "valor_contrato": 11.77,
-    "valor_periodo": 11.77,
+    "preco_unitario": 11.78,
+    "valor_contrato": 11.78,
+    "valor_periodo": 11.78,
     "valor_saldo": 0
    },
    {
@@ -23826,9 +23826,9 @@
     "qtd_contrato": 6,
     "qtd_periodo": 6,
     "qtd_saldo": 0,
-    "preco_unitario": 203.94,
-    "valor_contrato": 1223.64,
-    "valor_periodo": 1223.64,
+    "preco_unitario": 204.19,
+    "valor_contrato": 1225.14,
+    "valor_periodo": 1225.14,
     "valor_saldo": 0
    },
    {
@@ -23845,9 +23845,9 @@
     "qtd_contrato": 8,
     "qtd_periodo": 8,
     "qtd_saldo": 0,
-    "preco_unitario": 203.94,
-    "valor_contrato": 1631.52,
-    "valor_periodo": 1631.52,
+    "preco_unitario": 204.19,
+    "valor_contrato": 1633.52,
+    "valor_periodo": 1633.52,
     "valor_saldo": 0
    },
    {
@@ -23864,9 +23864,9 @@
     "qtd_contrato": 1750,
     "qtd_periodo": 1750,
     "qtd_saldo": 0,
-    "preco_unitario": 0.93,
-    "valor_contrato": 1627.5,
-    "valor_periodo": 1627.5,
+    "preco_unitario": 0.94,
+    "valor_contrato": 1645,
+    "valor_periodo": 1645,
     "valor_saldo": 0
    },
    {
@@ -23902,9 +23902,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 971.63,
-    "valor_contrato": 971.63,
-    "valor_periodo": 971.63,
+    "preco_unitario": 972.81,
+    "valor_contrato": 972.81,
+    "valor_periodo": 972.81,
     "valor_saldo": 0
    },
    {
@@ -23940,9 +23940,9 @@
     "qtd_contrato": 4,
     "qtd_periodo": 4,
     "qtd_saldo": 0,
-    "preco_unitario": 218.81,
-    "valor_contrato": 875.24,
-    "valor_periodo": 875.24,
+    "preco_unitario": 219.07,
+    "valor_contrato": 876.28,
+    "valor_periodo": 876.28,
     "valor_saldo": 0
    },
    {
@@ -23959,9 +23959,9 @@
     "qtd_contrato": 4,
     "qtd_periodo": 4,
     "qtd_saldo": 0,
-    "preco_unitario": 187.06,
-    "valor_contrato": 748.24,
-    "valor_periodo": 748.24,
+    "preco_unitario": 187.29,
+    "valor_contrato": 749.16,
+    "valor_periodo": 749.16,
     "valor_saldo": 0
    },
    {
@@ -23978,9 +23978,9 @@
     "qtd_contrato": 9,
     "qtd_periodo": 9,
     "qtd_saldo": 0,
-    "preco_unitario": 204.82,
-    "valor_contrato": 1843.38,
-    "valor_periodo": 1843.38,
+    "preco_unitario": 205.07,
+    "valor_contrato": 1845.63,
+    "valor_periodo": 1845.63,
     "valor_saldo": 0
    },
    {
@@ -23997,9 +23997,9 @@
     "qtd_contrato": 1300,
     "qtd_periodo": 1300,
     "qtd_saldo": 0,
-    "preco_unitario": 0.93,
-    "valor_contrato": 1209,
-    "valor_periodo": 1209,
+    "preco_unitario": 0.94,
+    "valor_contrato": 1222,
+    "valor_periodo": 1222,
     "valor_saldo": 0
    },
    {
@@ -24035,9 +24035,9 @@
     "qtd_contrato": 5,
     "qtd_periodo": 5,
     "qtd_saldo": 0,
-    "preco_unitario": 6.99,
-    "valor_contrato": 34.95,
-    "valor_periodo": 34.95,
+    "preco_unitario": 7,
+    "valor_contrato": 35,
+    "valor_periodo": 35,
     "valor_saldo": 0
    },
    {
@@ -24054,9 +24054,9 @@
     "qtd_contrato": 3,
     "qtd_periodo": 3,
     "qtd_saldo": 0,
-    "preco_unitario": 173.97,
-    "valor_contrato": 521.91,
-    "valor_periodo": 521.91,
+    "preco_unitario": 174.19,
+    "valor_contrato": 522.57,
+    "valor_periodo": 522.57,
     "valor_saldo": 0
    },
    {
@@ -24073,9 +24073,9 @@
     "qtd_contrato": 8,
     "qtd_periodo": 8,
     "qtd_saldo": 0,
-    "preco_unitario": 11.48,
-    "valor_contrato": 91.84,
-    "valor_periodo": 91.84,
+    "preco_unitario": 11.5,
+    "valor_contrato": 92,
+    "valor_periodo": 92,
     "valor_saldo": 0
    },
    {
@@ -24092,9 +24092,9 @@
     "qtd_contrato": 1500,
     "qtd_periodo": 1500,
     "qtd_saldo": 0,
-    "preco_unitario": 0.93,
-    "valor_contrato": 1395,
-    "valor_periodo": 1395,
+    "preco_unitario": 0.94,
+    "valor_contrato": 1410,
+    "valor_periodo": 1410,
     "valor_saldo": 0
    },
    {
@@ -24111,9 +24111,9 @@
     "qtd_contrato": 3,
     "qtd_periodo": 3,
     "qtd_saldo": 0,
-    "preco_unitario": 17.57,
-    "valor_contrato": 52.71,
-    "valor_periodo": 52.71,
+    "preco_unitario": 17.59,
+    "valor_contrato": 52.77,
+    "valor_periodo": 52.77,
     "valor_saldo": 0
    },
    {
@@ -24149,9 +24149,9 @@
     "qtd_contrato": 90,
     "qtd_periodo": 90,
     "qtd_saldo": 0,
-    "preco_unitario": 7.85,
-    "valor_contrato": 706.5,
-    "valor_periodo": 706.5,
+    "preco_unitario": 7.86,
+    "valor_contrato": 707.4,
+    "valor_periodo": 707.4,
     "valor_saldo": 0
    },
    {
@@ -24168,9 +24168,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 61.77,
-    "valor_contrato": 123.54,
-    "valor_periodo": 123.54,
+    "preco_unitario": 61.85,
+    "valor_contrato": 123.7,
+    "valor_periodo": 123.7,
     "valor_saldo": 0
    },
    {
@@ -24187,9 +24187,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 26.3,
-    "valor_contrato": 52.6,
-    "valor_periodo": 52.6,
+    "preco_unitario": 26.33,
+    "valor_contrato": 52.66,
+    "valor_periodo": 52.66,
     "valor_saldo": 0
    },
    {
@@ -24206,9 +24206,9 @@
     "qtd_contrato": 1.6,
     "qtd_periodo": 1.6,
     "qtd_saldo": 0,
-    "preco_unitario": 80.05,
-    "valor_contrato": 128.08,
-    "valor_periodo": 128.08,
+    "preco_unitario": 80.15,
+    "valor_contrato": 128.24,
+    "valor_periodo": 128.24,
     "valor_saldo": 0
    },
    {
@@ -24225,9 +24225,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 12.29,
-    "valor_contrato": 24.58,
-    "valor_periodo": 24.58,
+    "preco_unitario": 12.3,
+    "valor_contrato": 24.6,
+    "valor_periodo": 24.6,
     "valor_saldo": 0
    },
    {
@@ -24244,9 +24244,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 13.57,
-    "valor_contrato": 13.57,
-    "valor_periodo": 13.57,
+    "preco_unitario": 13.58,
+    "valor_contrato": 13.58,
+    "valor_periodo": 13.58,
     "valor_saldo": 0
    },
    {
@@ -24263,9 +24263,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 84.59,
-    "valor_contrato": 84.59,
-    "valor_periodo": 84.59,
+    "preco_unitario": 84.69,
+    "valor_contrato": 84.69,
+    "valor_periodo": 84.69,
     "valor_saldo": 0
    },
    {
@@ -24282,9 +24282,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 123.58,
-    "valor_contrato": 247.16,
-    "valor_periodo": 247.16,
+    "preco_unitario": 123.73,
+    "valor_contrato": 247.46,
+    "valor_periodo": 247.46,
     "valor_saldo": 0
    },
    {
@@ -24301,9 +24301,9 @@
     "qtd_contrato": 3,
     "qtd_periodo": 3,
     "qtd_saldo": 0,
-    "preco_unitario": 41.22,
-    "valor_contrato": 123.66,
-    "valor_periodo": 123.66,
+    "preco_unitario": 41.27,
+    "valor_contrato": 123.81,
+    "valor_periodo": 123.81,
     "valor_saldo": 0
    },
    {
@@ -24358,9 +24358,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 111.8,
-    "valor_contrato": 111.8,
-    "valor_periodo": 111.8,
+    "preco_unitario": 111.93,
+    "valor_contrato": 111.93,
+    "valor_periodo": 111.93,
     "valor_saldo": 0
    },
    {
@@ -24377,9 +24377,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 84.59,
-    "valor_contrato": 84.59,
-    "valor_periodo": 84.59,
+    "preco_unitario": 84.69,
+    "valor_contrato": 84.69,
+    "valor_periodo": 84.69,
     "valor_saldo": 0
    },
    {
@@ -24396,9 +24396,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 135.53,
-    "valor_contrato": 271.06,
-    "valor_periodo": 271.06,
+    "preco_unitario": 135.69,
+    "valor_contrato": 271.38,
+    "valor_periodo": 271.38,
     "valor_saldo": 0
    },
    {
@@ -24453,9 +24453,9 @@
     "qtd_contrato": 5,
     "qtd_periodo": 5,
     "qtd_saldo": 0,
-    "preco_unitario": 1044.85,
-    "valor_contrato": 5224.25,
-    "valor_periodo": 5224.25,
+    "preco_unitario": 1046.12,
+    "valor_contrato": 5230.6,
+    "valor_periodo": 5230.6,
     "valor_saldo": 0
    },
    {
@@ -24472,9 +24472,9 @@
     "qtd_contrato": 8,
     "qtd_periodo": 8,
     "qtd_saldo": 0,
-    "preco_unitario": 493.81,
-    "valor_contrato": 3950.48,
-    "valor_periodo": 3950.48,
+    "preco_unitario": 494.41,
+    "valor_contrato": 3955.28,
+    "valor_periodo": 3955.28,
     "valor_saldo": 0
    },
    {
@@ -24491,9 +24491,9 @@
     "qtd_contrato": 10,
     "qtd_periodo": 10,
     "qtd_saldo": 0,
-    "preco_unitario": 539.46,
-    "valor_contrato": 5394.6,
-    "valor_periodo": 5394.6,
+    "preco_unitario": 540.11,
+    "valor_contrato": 5401.1,
+    "valor_periodo": 5401.1,
     "valor_saldo": 0
    },
    {
@@ -24510,9 +24510,9 @@
     "qtd_contrato": 2,
     "qtd_periodo": 2,
     "qtd_saldo": 0,
-    "preco_unitario": 6.54,
-    "valor_contrato": 13.08,
-    "valor_periodo": 13.08,
+    "preco_unitario": 6.55,
+    "valor_contrato": 13.1,
+    "valor_periodo": 13.1,
     "valor_saldo": 0
    },
    {
@@ -24529,9 +24529,9 @@
     "qtd_contrato": 4,
     "qtd_periodo": 4,
     "qtd_saldo": 0,
-    "preco_unitario": 31.13,
-    "valor_contrato": 124.52,
-    "valor_periodo": 124.52,
+    "preco_unitario": 31.17,
+    "valor_contrato": 124.68,
+    "valor_periodo": 124.68,
     "valor_saldo": 0
    },
    {
@@ -24548,9 +24548,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 3.65,
-    "valor_contrato": 3.65,
-    "valor_periodo": 3.65,
+    "preco_unitario": 3.66,
+    "valor_contrato": 3.66,
+    "valor_periodo": 3.66,
     "valor_saldo": 0
    },
    {
@@ -24567,9 +24567,9 @@
     "qtd_contrato": 3,
     "qtd_periodo": 3,
     "qtd_saldo": 0,
-    "preco_unitario": 11.39,
-    "valor_contrato": 34.17,
-    "valor_periodo": 34.17,
+    "preco_unitario": 11.4,
+    "valor_contrato": 34.2,
+    "valor_periodo": 34.2,
     "valor_saldo": 0
    },
    {
@@ -24586,9 +24586,9 @@
     "qtd_contrato": 4,
     "qtd_periodo": 4,
     "qtd_saldo": 0,
-    "preco_unitario": 74.55,
-    "valor_contrato": 298.2,
-    "valor_periodo": 298.2,
+    "preco_unitario": 74.64,
+    "valor_contrato": 298.56,
+    "valor_periodo": 298.56,
     "valor_saldo": 0
    },
    {
@@ -24605,9 +24605,9 @@
     "qtd_contrato": 3,
     "qtd_periodo": 3,
     "qtd_saldo": 0,
-    "preco_unitario": 7.09,
-    "valor_contrato": 21.27,
-    "valor_periodo": 21.27,
+    "preco_unitario": 7.1,
+    "valor_contrato": 21.3,
+    "valor_periodo": 21.3,
     "valor_saldo": 0
    },
    {
@@ -24624,9 +24624,9 @@
     "qtd_contrato": 416,
     "qtd_periodo": 416,
     "qtd_saldo": 0,
-    "preco_unitario": 13.77,
-    "valor_contrato": 5728.32,
-    "valor_periodo": 5728.32,
+    "preco_unitario": 13.79,
+    "valor_contrato": 5736.64,
+    "valor_periodo": 5736.64,
     "valor_saldo": 0
    },
    {
@@ -24643,9 +24643,9 @@
     "qtd_contrato": 416,
     "qtd_periodo": 416,
     "qtd_saldo": 0,
-    "preco_unitario": 11.04,
-    "valor_contrato": 4592.64,
-    "valor_periodo": 4592.64,
+    "preco_unitario": 11.05,
+    "valor_contrato": 4596.8,
+    "valor_periodo": 4596.8,
     "valor_saldo": 0
    },
    {
@@ -24662,9 +24662,9 @@
     "qtd_contrato": 15,
     "qtd_periodo": 15,
     "qtd_saldo": 0,
-    "preco_unitario": 297.92,
-    "valor_contrato": 4468.8,
-    "valor_periodo": 4468.8,
+    "preco_unitario": 298.28,
+    "valor_contrato": 4474.2,
+    "valor_periodo": 4474.2,
     "valor_saldo": 0
    },
    {
@@ -24681,9 +24681,9 @@
     "qtd_contrato": 15,
     "qtd_periodo": 15,
     "qtd_saldo": 0,
-    "preco_unitario": 178.31,
-    "valor_contrato": 2674.65,
-    "valor_periodo": 2674.65,
+    "preco_unitario": 178.53,
+    "valor_contrato": 2677.95,
+    "valor_periodo": 2677.95,
     "valor_saldo": 0
    },
    {
@@ -24700,9 +24700,9 @@
     "qtd_contrato": 1,
     "qtd_periodo": 1,
     "qtd_saldo": 0,
-    "preco_unitario": 93.07,
-    "valor_contrato": 93.07,
-    "valor_periodo": 93.07,
+    "preco_unitario": 93.19,
+    "valor_contrato": 93.19,
+    "valor_periodo": 93.19,
     "valor_saldo": 0
    }
   ],
